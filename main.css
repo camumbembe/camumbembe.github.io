@@ -1,9 +1,9 @@
 
 body {
-    background-image: url("littlehouse.jpg");
+    /* background-image: url("littlehouse.jpg"); */
     font-family: 'Faustina', serif;
     font-weight: 500;
-    color: rgb(160, 23, 148);
+    color: rgb(138, 24, 128);
     border: 1px solid rgba(255, 136, 0, 0.616);
  
 }
@@ -70,7 +70,7 @@ ul {
 
 a {
     text-decoration:none;
-    color:rgb(138, 16, 91);
+    color:rgb(83, 11, 56);
 }
 
 a:hover{
@@ -85,8 +85,7 @@ a:hover{
     top: 100px;
     width: 70%;
     position: relative;
-    z-index: 2;
-    
+    z-index: 2;   
 }
    
 
@@ -108,11 +107,14 @@ p {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    
 }
 
 .contorno {
     border: 1px solid wheat;
+   
 }
+
 
 footer {
     position: relative;
@@ -121,6 +123,7 @@ footer {
     height: 75px;
     padding: 15px;
     bottom: 0;
+    
 }
 
 
