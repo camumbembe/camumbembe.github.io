@@ -1,0 +1,126 @@
+
+body {
+    background-image: url("littlehouse.jpg");
+    font-family: 'Faustina', serif;
+    font-weight: 500;
+    color: rgb(160, 23, 148);
+    border: 1px solid rgba(255, 136, 0, 0.616);
+ 
+}
+
+header {
+    position: sticky;
+    display: grid;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(rgb(255, 193, 122),rgb(252, 216, 176));
+    height: 23%;
+    z-index: 3;
+}
+
+
+ @media screen and (max-width: 800px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+    } 
+    .container {
+        color: wheat;
+    }
+    .projetos{
+        color: wheat;
+    }
+} 
+
+@media screen and (max-width: 390px) {
+   .remove {
+        display: none;
+    }
+    header {
+        justify-content: space-around;
+    } 
+    .container {
+        color: wheat;
+    }
+    .projetos{
+        color: wheat;
+    }
+} 
+
+.nomesite {
+    padding-left: 15px;
+    color: rgb(83, 11, 56);
+    font-family: 'Faustina', serif;
+}
+
+nav {
+    grid-column: 2 / 3;
+    width: 100%;
+    padding-top: 15px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration:none;
+    color:rgb(138, 16, 91);
+}
+
+a:hover{
+    color: palevioletred;
+}
+
+
+.container {
+    height: 70vh;
+    text-align: center;
+    margin: auto;
+    top: 100px;
+    width: 70%;
+    position: relative;
+    z-index: 2;
+    
+}
+   
+
+p {
+    font-size: 1.3rem;
+}
+
+.projetos {
+    height: 70vh;
+    margin: 0 25px;
+    text-align: center;
+    position: relative;
+    top: 100px;    
+    color: rgb(175, 108, 19);
+}
+
+.sites {
+    height: 70px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contorno {
+    border: 1px solid wheat;
+}
+
+footer {
+    position: relative;
+    background-color:rgb(255, 243, 221);
+    text-align: center;
+    height: 75px;
+    padding: 15px;
+    bottom: 0;
+}
+
+
