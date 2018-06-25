@@ -1,11 +1,10 @@
-
 body {
     /* background-image: url("littlehouse.jpg"); */
-    font-family: 'Faustina', serif;
+    font-family: 'Gaegu', cursive;
     font-weight: 500;
     color: rgb(138, 24, 128);
     border: 1px solid rgba(255, 136, 0, 0.616);
- 
+    font-size: 19px;
 }
 
 header {
@@ -14,39 +13,38 @@ header {
     width: 100%;
     left: 0;
     top: 0;
-    background: linear-gradient(rgb(255, 193, 122),rgb(252, 216, 176));
+    background: linear-gradient(rgb(255, 193, 122), rgb(252, 216, 176));
     height: 23%;
     z-index: 3;
 }
 
-
- @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     header {
         display: flex;
         justify-content: space-around;
-    } 
+    }
     .container {
         color: wheat;
     }
-    .projetos{
+    .projetos {
         color: wheat;
     }
-} 
+}
 
 @media screen and (max-width: 390px) {
-   .remove {
+    .remove {
         display: none;
     }
     header {
         justify-content: space-around;
-    } 
+    }
     .container {
         color: wheat;
     }
-    .projetos{
+    .projetos {
         color: wheat;
     }
-} 
+}
 
 .nomesite {
     padding-left: 15px;
@@ -65,18 +63,17 @@ ul {
     list-style: none;
     text-align: center;
     justify-content: space-around;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 a {
-    text-decoration:none;
-    color:rgb(83, 11, 56);
+    text-decoration: none;
+    color: rgb(83, 11, 56);
 }
 
-a:hover{
+a:hover {
     color: palevioletred;
 }
-
 
 .container {
     height: 70vh;
@@ -85,12 +82,11 @@ a:hover{
     top: 100px;
     width: 70%;
     position: relative;
-    z-index: 2;   
+    z-index: 2;
 }
-   
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 .projetos {
@@ -98,8 +94,9 @@ p {
     margin: 0 25px;
     text-align: center;
     position: relative;
-    top: 100px;    
-    color: rgb(175, 108, 19);
+    top: 100px;
+    color: rgb(83, 11, 56);
+    font-size: 1.5rem;
 }
 
 .sites {
@@ -107,23 +104,17 @@ p {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
 }
 
 .contorno {
     border: 1px solid wheat;
-   
 }
-
 
 footer {
     position: relative;
-    background-color:rgb(255, 243, 221);
+    background-color: rgb(255, 243, 221);
     text-align: center;
     height: 75px;
     padding: 15px;
     bottom: 0;
-    
 }
-
-
