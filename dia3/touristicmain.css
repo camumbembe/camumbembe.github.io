@@ -1,0 +1,350 @@
+body {
+    height: auto;
+    font-weight: 300;
+    background-color: rgb(243, 243, 243);
+}
+
+header {
+    display: grid;
+    position: sticky;
+    background-color: rgb(250, 250, 250);
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+nav {
+    grid-column: 2 / 3;
+    width: 100%;
+    align-content: center;
+}
+
+.sitetitle {
+    padding-left: 15%;
+    /* font-family: 'Shadows Into Light', cursive;
+    font-family: 'Architects Daughter', cursive; */
+}
+
+span {
+    font-size: 1rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-top: 2%;
+    font-size: 1.3rem;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: rgb(151, 138, 22);
+}
+
+h1 {
+    font-family: 'Shadows Into Light Two', cursive;
+    margin: 3%;
+}
+
+.presenting {
+ 
+    background-color: rgb(250, 250, 250);
+
+}
+
+.principal {
+    margin-left: auto;
+    width: 70vw;
+    margin-right: auto;
+    padding: 3%;
+    
+}
+
+.principal img {
+    width: 70vw;
+    height: auto;
+    box-shadow: 0px 5px 33px -5px rgba(0,0,0,0.75);
+  
+}
+
+.gallerygrid {
+    display: flex;
+    width: 70vw;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Shadows Into Light Two', cursive;
+    padding-bottom: 3%;
+}
+
+.gallerygrid label figure {
+    width: 200px;
+    height: 190px;
+    margin: 8px 0;
+    padding: 8px;
+    /* border: 1px solid #777; */
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0px 5px 33px -5px rgba(0,0,0,0.75);
+}
+
+.gallerygrid label figure img {
+    max-width: 100%;
+}
+
+.gallerygrid label figure figcaption {
+    text-align: center;
+    padding: 8px 4px;
+}
+
+.informations {
+    background-color: rgb(250, 250, 250);
+    padding: 1.5%;
+}
+
+h3 {
+    font-family: 'Shadows Into Light Two', cursive;
+    margin: 3%;
+}
+
+p {
+    font-family: 'Markazi Text', serif;
+    font-size: 1.5rem;
+    padding: 2.5%;
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        display: none;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+    .gallerygrid {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        overflow-x: auto;
+    }
+    .gallerygrid label {
+        width: 200px;
+        height: 100%;
+        flex-shrink: 0;
+    }
+    .slidebkgrd {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    nav {
+        display: none;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+    span {
+        font-size: 0.9rem;
+    }
+    .sitetitle {
+        padding-left: 3%;
+        font-size: 1.5rem;
+    }
+    body {
+        width: 100vw;
+        font-weight: 100;
+    }
+    .gallerygrid {
+        width: 215px;
+        height: 200px;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 7%;
+        padding-left: 5px;
+        
+    }
+
+    .gallerygrid label figure {
+        box-shadow: 7px 7px 24px -12px rgba(0,0,0,0.75);
+
+    }
+
+    .gallerygrid label  {
+        width: 200px;
+        height: 100%;
+        flex-shrink: 0;
+        
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    p {
+        padding: 5%;
+    }
+    .slidebkgrd {
+        display: none;
+    }
+
+    /* .gallerygrid figure:last-child figcaption{
+        padding: 3px 4px;
+    } */
+}
+
+figure:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/*------------------ photo gallery -------------------*/
+
+
+.slides {
+    padding: 0;
+    width: 690px;
+    height: 490px;
+    display: none;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides:target {
+    display: block;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input {
+    display: none;
+}
+
+.slidecontainer {
+    display: block;
+}
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 690px;
+    height: 490px;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s easy-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 105pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: monospace;
+    /* background-color: rgba(255, 255, 255, .3);*/
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover+.nav label {
+    opacity: 0.5;
+}
+
+.nav label:hover {
+    opacity: 1;
+}
+
+.nav .next {
+    right: 0;
+}
+
+input:checked+.slidecontainer .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s easy-in-out;
+}
+
+input:checked+.slidecontainer .nav label {
+    display: block;
+}
+
+#photoslide {
+    display: none;
+}
+
+#photoslide:checked ~ .slidebkgrd .slides {
+    z-index: 9999;
+    opacity: 1;
+    transform: scale(1);
+    overflow: hidden;
+    transform: translateY(0);
+    display: block;
+    top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#photoslide:checked ~ .slidebkgrd {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    position: fixed;
+    top: 0;
+}
+
+/* ----- close -----*/
+
+.close-icon {
+    display: none;
+}
+
+#photoslide:checked ~ .slidebkgrd .close-icon {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 290px; 
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    color: #FFF;
+   
+
+}
+
+.close-icon:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+#photoslide:checked ~ .slidebkgrd .background-close {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -3;
+    
+}
